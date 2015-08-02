@@ -7,4 +7,4 @@ image: annonce-d-ouverture.png
 
 Information de base à propos de la garderie.
 
-[Télécharger l'annonce](files/blog/annonce-d-ouverture.pdf)
+[Télécharger l'annonce](/files/blog/annonce-d-ouverture.pdf)
