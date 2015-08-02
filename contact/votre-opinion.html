@@ -1,0 +1,71 @@
+---
+layout: default
+permalink: /contact/votre-opinion/
+---
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+<script type="text/javascript">
+var inboxName = "Suggestions";
+</script>
+<script type="text/javascript" src="/js/contact.js"></script>
+
+<div class="row">
+	<div class="shrink-on-small small-12 medium-3 columns">
+		<p>
+			<img src="/img/opinion.png" class="slider-image-button rounded-image">
+		</p>
+	</div>
+	<div class="small-12 medium-9 columns">
+		<h3>Votre opinion</h3>		
+		
+		<form id="contact-form" method="POST">
+
+			<div class="row">
+				<div class="large-6 columns">
+					<label>Votre nom
+						<input type="text" id="content-name" name="content[name]" value="" placeholder="Votre nom">
+					</label>
+				</div>
+				<div class="large-6 columns">
+					<label>Votre courriel
+						<input type="text" id="content-email" name="content[email]" value="" placeholder="Votre courriel">
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<label>Sujet
+						<input type="text" id="content-subject" name="content[subject]" value="" placeholder="Le sujet de votre message">
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<label>Votre message
+						<textarea id="content-message" name="content[message]" placeholder="Votre message" rows="6"></textarea>
+					</label>
+				</div>
+			</div>
+			
+			<div class="row" style="min-height: 100px;">
+				<div class="large-6 columns">
+					<div class="g-recaptcha" data-sitekey="6Lc9DAETAAAAAOV_U1bJ1ChyHk3G0J6wbWnXRc-e">
+					</div>
+				</div>
+				<div class="large-6 columns">
+					<input type="submit" class="button radius success right" value="Soumettre">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="large-12 columns">
+					<div id="errors" data-alert class="alert-box alert" style="display: none;">
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+</div>

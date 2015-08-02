@@ -1,0 +1,38 @@
+<div class="site-menu row">
+  <div class="small-12 columns">
+    <div class="contain-to-grid">
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="{% if page.path == "index.html" %}active{%endif%}"><a href="/">Accueil</a></li>
+            <li class="{% if page.path == "notre-mission.html" %}active{%endif%}"><a href="/notre-mission">Notre mission</a></li>
+            <li class="{% if page.path == "portail.html" %}active{%endif%}"><a href="/portail-des-parents">Portail des parents</a></li>
+            <li class="{% if page.path == "blog.html" %}active{%endif%}"><a href="/blog">Blog</a></li>
+            <li id="contact-link" class="link last has-dropdown not-click">
+              <a href="/contact">Contact</a>
+              <ul id="nav-contact" class="dropdown">
+                <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
+                <li class="{% if page.path == "contact.html" %}active{%endif%}"><a href="/contact">Nous contacter</a></li>
+                <li class="{% if page.path == "contact/votre-opinion.html" %}active{%endif%}"><a href="/contact/votre-opinion">Votre opinion</a></li>
+                <li class="{% if page.path == "contact/consultation.html" %}active{%endif%}"><a href="/contact/consultation">Consultation</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+/* This finds all menu items with child menus and adds the foundation classes to make them dropdown menus */
+$(".site-menu nav section ul li").has("ul").each( function( index, value ) {
+  $(value).addClass( "has-dropdown" );
+  $(value).find( "ul" ).addClass( "dropdown" );
+} );
+</script>

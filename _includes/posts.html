@@ -1,0 +1,15 @@
+  {% for post in include.posts %}
+  <article class="post small-12 medium-4 columns left">
+    <div class="post-image">
+      <img src="/img/blog/{{ post.image }}" class="th" size="400x300!" style="width: 400px; height: 230px;" alt="header-image-#{article.slug}" >
+    </div>
+    <p class="post-date">
+      {{ post.date | date: "%e %B %Y" }}
+    </p>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+  </article>
+
+  {% cycle '', '', '<div class="clearfix">&nbsp;<hr/></div>' %}
+
+  {% endfor %}

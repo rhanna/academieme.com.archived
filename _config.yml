@@ -1,5 +1,5 @@
 # Site settings
-title: Robert H.
+title: Académie Marie-Emmanuel
 email: rhanna@rhanna.com
 description: >
   My personal blog includes general information about me
@@ -11,3 +11,12 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+navigation:
+- text: What we do
+  url: /en/what-we-do/
+- text: Who we are
+  url: /en/who-we-are/
+- text: Projects
+  url: /en/projects/
+  layout: project

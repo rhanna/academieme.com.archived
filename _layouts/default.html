@@ -6,14 +6,20 @@
   <body>
 
     {% include header.html %}
+    {% include menu.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
     {% include footer.html %}
+
+    <!-- Included JS Files (Compressed) -->
+    <script type="text/javascript" src="/js/foundation.min.js"></script>
+
+    <script>
+    $(document).foundation();
+    </script>
+
+    <script type="text/javascript" src="/js/app.js"></script>
 
   </body>
 

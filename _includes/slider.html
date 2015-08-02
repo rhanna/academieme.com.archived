@@ -1,0 +1,43 @@
+
+<div class="row">
+	<div class="small-12 columns">
+		<div class="rslides_container">
+			<ul class="rslides">
+				<li>
+					<img src="/img/banner1.png">
+					<div class="slider-button-bar">
+						<a href="/contact/votre-opinion" style="position: relative; left: 50px">
+							<img src="/img/opinion.png" class="slider-image-button rounded-image" alt="opinion">
+						</a>
+						<a href="/contact/consultation" style="position: relative; margin-left: 50px">
+							<img src="/img/consultation.png" class="slider-image-button rounded-image" alt="opinion">
+						</a>
+					</div>
+				</li>
+				<li>
+					<a href="/contact">
+					  <img src="/img/banner2.png">
+					</a>
+				</li>
+				<li>
+					<img src="/img/banner3.png">
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+	<style>
+	.centered-btns_nav {
+		background: transparent url("/img/slider_arrows.gif") no-repeat left top;
+	}
+	</style>
+
+    <script type="text/javascript" src="/js/responsiveslides.min.js"></script>
+
+	<script>
+	$(function() {
+		$(".rslides").responsiveSlides( { speed: 800, pager: true, nav: true, pause: true, pauseControls: true,
+			namespace: "centered-btns" });
+	});
+	</script>

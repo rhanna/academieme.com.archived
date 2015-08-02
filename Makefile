@@ -9,11 +9,10 @@ new:
 	docker run --rm -ti ${CFG_VOL} ${NAME} sh -c "cd /srv/jekyll && jekyll new ."
 
 run:
-	#docker run --rm -ti ${CFG_VOL} -p ${PORT}:4000 ${NAME}
-	docker run --rm -ti ${CFG_VOL} -p ${PORT}:4000 jekyll/jekyll
+	docker run --rm -ti ${CFG_VOL} -p ${PORT}:4000 ${NAME}
 
 run-bash:
 	docker run --rm -ti ${CFG_VOL} ${NAME} /bin/bash
 
 open:
-	open http://$(shell boot2docker ip):${PORT}
+	open http://$(shell docker-machine ip docker1):${PORT}

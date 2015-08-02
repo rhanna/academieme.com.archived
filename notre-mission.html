@@ -1,0 +1,95 @@
+---
+layout: default
+permalink: /notre-mission/
+---
+
+
+<div class="row">
+	<div class="twelve columns">
+		<h3>Notre mission</h3>
+
+		<p>
+			Est d’offrir un service de garde de qualité assurant la santé, la sécurité et le bien-être
+			des enfants mais aussi un milieu chaleureux et accueillant où chacun y trouve sa place.
+		</p>
+
+		<p>
+			Le tout s’orientera sur « l’ouverture sur le monde » ...
+		</p>
+
+		<p>
+			Académie Marie-Emmanuel fonde ses bases sur une règle importante: être une équipe formidable dans laquelle tous les êtres qui la forment, ont une place privilégiée.
+		</p>
+
+		<p>
+			C’est également un lieu où l’enfant se sent accepté dans toute son intégrité ce qui lui permet par conséquent de grandir, de s’épanouir et de se découvrir à travers tous les aspects de son développement soit physique, intellectuel, social, affectif et moral.
+		</p>
+
+		<hr/>
+
+		<h3>Notre vision</h3>
+
+		<p>
+			Un visionnaire « éducatif » de qualité.
+		</p>
+
+		<p>
+			Jouer demeure l'activité principale de l'enfant et le jeu constitue l’instrument majeur pour l'amener à développer ses connaissances et ses habiletés.
+		</p>
+
+		<p>
+			Les diverses interactions se manifestent par une passion pour le travail, un dynamisme accru, un esprit créatif et un enthousiasme sans cesse partagés.
+		</p>
+
+		<p>
+			Les éducatrices basent leur vécu quotidien, avec les enfants, sur une attitude éducative et un mode d'intervention démocratique.
+		</p>
+
+		<p>
+			Avoir un regard sur le monde permettra à l’enfant de connaître les différences dans les cultures qui existent et qui lui sont encore inconnues. La musique, les arts, l’alimentation, les langues sont des éléments qui enrichiront davantage ses connaissances et son sens de l’unicité comme être humain.
+		</p>
+	</div>
+</div>
+
+{% if data.staff.employees %}
+<div class="row">
+	<div class="small-12 columns">
+		<h3>Notre équipe</h3>
+
+		<div class="row bump">
+			<% data.staff.employees.each_with_index do |employee, index| %>
+			<div class="small-12 large-6 columns left">
+				<div class="row">
+					<div class="profile-card">
+						<div class="profile-image small-12 large-4 columns">
+							<a href="/{{ page.slug }}/{{ employee._slug }}">
+								<%= image_tag "images/staff/#{employee.photo}", alt: "profile image",
+								style: "width: 128px; height: 128px" %>
+							</a>
+						</div>
+						<div class="small-12 large-8 columns">
+							<h4>
+								<a href="/{{ page.slug }}/{{ employee._slug }}">
+									<%= employee.name %><span><%= employee.title %></span>
+								</a>
+							</h4>
+							<% if employee.email %>
+							<p><i class="fi-mail"></i><span><%= employee.email %></span></p>
+							<% end %>
+							<% if employee.phone %>
+							<p><i class="fi-telephone"></i><%= employee.phone %></p>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<% if (index % 2 == 1) %>
+			<div class="clearfix">&nbsp;</div>
+			<% end %>
+
+			<% end %>
+		</div>
+	</div>
+</div>
+{% endif %}
